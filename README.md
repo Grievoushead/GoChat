@@ -9,3 +9,10 @@ This is mainly for beego sample applications, you can either study how to use be
 - [WebIM](WebIM/README.md): Chat room demo based on long polling and WebSocket.
 - [ShortURL](shorturl/README.md): shouturl app based on beego. API applications
 - [Todo](todo/README.md): todo app based on beego.angularJS with API which is designed by beego.
+
+## How to:
+
+- Switch to Chat folder ``` cd WebIM ```
+- Install godeps ``` go get ```
+- Run ``` go run WebIM.go ```
+
