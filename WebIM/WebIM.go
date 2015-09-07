@@ -19,7 +19,7 @@ import (
 	"github.com/astaxie/beego"
 	"github.com/beego/i18n"
 
-	"github.com/beego/samples/WebIM/controllers"
+	"samples/WebIM/controllers"
 )
 
 const (
@@ -42,6 +42,8 @@ func main() {
 	// WebSocket.
 	beego.Router("/ws", &controllers.WebSocketController{})
 	beego.Router("/ws/join", &controllers.WebSocketController{}, "get:Join")
+	beego.Router("/test", &controllers.TestController{}, "get:Test")
+	beego.Router("/test2", &controllers.TestController{}, "get:Test2")
 
 	// Register template functions.
 	beego.AddFuncMap("i18n", i18n.Tr)

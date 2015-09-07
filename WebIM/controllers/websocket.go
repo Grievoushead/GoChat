@@ -43,6 +43,19 @@ func (this *WebSocketController) Get() {
 	this.Data["UserName"] = uname
 }
 
+func (this *WebSocketController) Test() {
+	// Safe check.
+	uname := this.GetString("uname")
+	/*if len(uname) == 0 {
+		this.Redirect("/", 302)
+		return
+	}*/
+
+	this.TplNames = "test.html"
+	this.Data["IsWebSocket"] = true
+	this.Data["UserName"] = uname
+}
+
 // Join method handles WebSocket requests for WebSocketController.
 func (this *WebSocketController) Join() {
 	uname := this.GetString("uname")
